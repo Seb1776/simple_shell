@@ -10,6 +10,5 @@
 <h2><strong>What is a Shell?</strong></h2>
 <p>A shell is a program that acts as an interface between the user and the UNIX
  system, allowing you to enter commands for the operating system to be run.</p>
-
 </body>
 </html>
