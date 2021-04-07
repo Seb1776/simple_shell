@@ -1,9 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<img src = "https://blog.holbertonschool.com/wp-content/uploads/2019/04/instagram_feed180.jpg"width = "800"  height = "300">
-<h1>Simple Shell.</h1>
+    <p class="img"><img src = "https://www.holbertonschool.com/holberton-logo.png"></p>
+<h1 class="simple_shell">Simple Shell.</h1>
 <hr>
 <h2>This repository contains the 0x16. C - Simple Shell project.</h2>
 <br><br><br>
