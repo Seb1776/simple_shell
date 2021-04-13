@@ -1,23 +1,33 @@
 #include "shell.h"
+
 /**
- * main - This function is the main function and execute other functions
- * Return:int
+ * main - Main function, initializes Shell
+ *
+ * @argc: Amount of Arguments
+ * @argv: Arguments
+ *
+ * Return: current state
  */
 int main(void)
 {
+        int cmd;
+        char *dspl = "$ ", *empty = NULL, **token = NULL;
+        size_t n;
 
-	char *linea, **token;
-	int status;
+        while (1)
+        {
+                if (isatty(STDIN_FILENO))
+                        write(STDOUT_FILENO, dspl, strlen(dspl));
 
-	while (1)
-	{
-		write(STDOUT_FILENO, "$ ", 2);
-		linea = read_Getline();
-		token = strtok_line(linea);
-		status = execute(token);
-		free(linea);
-		free(token);
-		(void)status;
-	}
+                cmd = getline(&empty, &n, stdin);
+                token = strtok_line(empty);
+                global_st = execute(token);
+                if (cmd == EOF)
+                {
+                        if (isatty(STDIN_FILENO))
+                                _putchar('\n');
+                        invoke_sh_exit(empty);
+                }
+        }
 	return (0);
 }

@@ -13,4 +13,8 @@
 int execute(char **tokens);
 char *read_Getline(void);
 char **strtok_line(char *line);
+int global_st;
+
+int _putchar(char c);
+int invoke_sh_exit(char *cmd);
 #endif
