@@ -17,6 +17,7 @@ int main(void)
 		status = execute(token);
 		free(linea);
 		free(token);
+		(void)status;
 	}
 	return (0);
 }

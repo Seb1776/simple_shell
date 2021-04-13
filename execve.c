@@ -26,5 +26,6 @@ int execute(char **tokens)
 			wpid = waitpid(pid, &status, WUNTRACED);
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
+	(void)wpid;
 	return (1);
 }

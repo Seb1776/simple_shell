@@ -14,4 +14,5 @@ char *read_Getline(void)
 
 	c_readed = getline(&linea, &t, stdin);
 	return (linea);
+	(void)c_readed;
 }
