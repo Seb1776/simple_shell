@@ -14,6 +14,8 @@ int main(void)
 	char *dspl = "$ ", *empty = NULL;
 	size_t n;
 
+	global_st = 0;
+
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
@@ -26,6 +28,11 @@ int main(void)
 			if (isatty(STDIN_FILENO))
 				_putchar('\n');
 			invoke_sh_exit(empty);
+		}
+
+		if (cmd != -1)
+		{
+			builtin_manager(empty);
 		}
 	}
 }
