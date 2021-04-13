@@ -10,24 +10,29 @@
  */
 int main(void)
 {
-        int cmd;
-        char *dspl = "$ ", *empty = NULL, **token = NULL;
-        size_t n;
+	int cmd;
+	char *dspl = "$ ", *empty = NULL;
+	size_t n;
 
-        while (1)
-        {
-                if (isatty(STDIN_FILENO))
-                        write(STDOUT_FILENO, dspl, strlen(dspl));
+	global_st = 0;
 
-                cmd = getline(&empty, &n, stdin);
-                token = strtok_line(empty);
-                global_st = execute(token);
-                if (cmd == EOF)
-                {
-                        if (isatty(STDIN_FILENO))
-                                _putchar('\n');
-                        invoke_sh_exit(empty);
-                }
-        }
-	return (0);
+	while (1)
+	{
+		if (isatty(STDIN_FILENO))
+			write(STDOUT_FILENO, dspl, strlen(dspl));
+
+		cmd = getline(&empty, &n, stdin);
+
+		if (cmd == EOF)
+		{
+			if (isatty(STDIN_FILENO))
+				_putchar('\n');
+			invoke_sh_exit(empty);
+		}
+
+		if (cmd != -1)
+		{
+			builtin_manager(empty);
+		}
+	}
 }
