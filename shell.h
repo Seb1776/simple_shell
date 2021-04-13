@@ -10,5 +10,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <errno.h>
-
+int execute(char **tokens);
+char *read_Getline(void);
+char **strtok_line(char *line);
 #endif
