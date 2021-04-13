@@ -11,4 +11,9 @@
 #include <fcntl.h>
 #include <errno.h>
 
+int global_st;
+
+int _putchar(char c);
+int invoke_sh_exit(char *cmd);
+
 #endif

@@ -23,7 +23,9 @@ int main(void)
 
 		if (cmd == EOF)
 		{
-
+			if (isatty(STDIN_FILENO))
+				_putchar('\n');
+			invoke_sh_exit(empty);
 		}
 	}
 }
