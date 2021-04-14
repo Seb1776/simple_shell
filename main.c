@@ -30,7 +30,6 @@ int main(void)
 				_putchar('\n');
 			invoke_sh_exit(empty);
 		}
-		printf("%s", empty);
 		if (cmd != -1)
 		{
 			builtin_manager(empty);

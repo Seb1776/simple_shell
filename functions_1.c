@@ -47,6 +47,18 @@ void hsh_execute(char **cmd)
 			free(cmd);
 			exit(global_st);
 		}
+		else if (execve(cmd[0], cmd, environ) == -1)
+                {
+
+                        while (cmd[i])
+                        {
+                                free(cmd[i]);
+                                i++;
+                        }
+
+                        free(cmd);
+                        exit(global_st);
+                }
 	}
 
 	if (pid > 0)
