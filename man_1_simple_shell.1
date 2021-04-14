@@ -1,0 +1,72 @@
+.TH simple_shell 1 "2021-04-14" "V1.0" "simple_shell man page"
+
+.SH NAME
+simple_shell
+
+.SH SYNOPSIS
+This is a command line interpreter with a command input interface
+
+.SH DESCRIPTION
+The objective of this program is understand how an unix shell works like, recreating it in C. It handles some builtins.
+
+.SH EXIT STATUS
+    If a command is not found, errno will be ENOENT, and the return status is 127. If a command is found but is not executable errno will be EACCES  (Permission denied), and the return status is 126. If all it is right, the return status will be EXIT_SUCCES or 0.
+
+.SH EXAMPLES
+[non-interactive mode]
+        [command line]
+        $ echo "qwerty" | ./hsh
+        [outcome]
+        ./hsh: 1: qwerty: not found
+        $
+
+        [command line 2]
+        $ echo "qwerty" | ./././hsh
+        [outcome]
+        ./././hsh: 1: qwerty: not found
+        $
+
+[interactive mode]
+
+	[command line]
+
+	$ls -l
+
+    [outcome]
+
+    total 60
+
+-rw-rw-r-- 1 vagrant vagrant   124 Apr  6 22:06 AUTHORS
+-rw-rw-r-- 1 vagrant vagrant  1251 Apr 13 19:34 holberton_shell.h
+-rwxrw-r-- 1 vagrant vagrant 18606 Apr  6 22:06 hsh
+-rw-rw-r-- 1 vagrant vagrant   934 Apr 14 02:07 main.c
+-rw-rw-r-- 1 vagrant vagrant   974 Apr 14 15:49 man_1_simple_shell.1
+-rw-rw-r-- 1 vagrant vagrant  3811 Apr  6 22:06 README.md
+-rw-rw-r-- 1 vagrant vagrant   942 Apr  6 22:06 shell_functions_five.c
+-rw-rw-r-- 1 vagrant vagrant  1334 Apr  6 22:06 shell_functions_four.c
+-rw-rw-r-- 1 vagrant vagrant  1772 Apr 14 15:45 shell_functions_one.c
+-rw-rw-r-- 1 vagrant vagrant  1677 Apr 13 22:20 shell_functions_three.c
+-rw-rw-r-- 1 vagrant vagrant  2245 Apr 13 22:14 shell_functions_two.c
+
+.SH SEE ALSO
+    Project code files.
+
+* shell_functions_core.c : Core functions to execute the shell.
+
+* shell_functions_path.c : Functions to handle the PATH.
+
+* shell_functions_buff.c : Functions that handle a buffer.
+
+*shell_functions_utility.c : Utility string functions.
+
+*shell_functions_utility_2.c : Utility string functions.
+
+*shell.h : Header file, contains all prototypes.
+
+*hsh : Compiled program ready to execute.
+
+*main.c : Main file.
+
+.SH AUTHORS
+Sebastian Toro Rodriguez
+Juan Felipe Balanta
