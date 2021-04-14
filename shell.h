@@ -42,5 +42,6 @@ void _puts(char *str);
 int _puterror(char c);
 int _strlen(char *s);
 int check_for_empty(char *str);
-
+char **strtok_line(char *line);
+void hsh_execute(char **cmd);
 #endif
