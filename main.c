@@ -1,4 +1,4 @@
-#include "holberton_shell.h"
+#include "shell.h"
 
 /**
  * main - Main function, initializes Shell
