@@ -37,6 +37,8 @@ void hsh_execute(char **cmd)
 	{
 		if (execve(cmd[0], cmd, NULL) == -1)
 		{
+			error_manager(cmd[0], hst);
+			free(txt);
 
 			while (cmd[i])
 			{

@@ -83,12 +83,12 @@ int _strcmp(char *frm, const char *dst, int size)
 }
 
 /**
- * _strlen - Length of array
- *
- * @s: string
- *
- * Return: Length of array
- */
+* _strlen - Length of array
+*
+* @s: string
+*
+* Return: Length of array
+*/
 int _strlen(char *s)
 {
 	int i = 0;
@@ -181,6 +181,7 @@ int check_for_empty(char *str)
 
 	return (-1);
 }
+
 /**
  * strtok_line - This function divides a string of characters into words
  * @Linea:This parameter receives a string

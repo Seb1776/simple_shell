@@ -14,7 +14,7 @@ int main(void)
 	char *dspl = "$ ", *empty = NULL, **token = NULL;
 	size_t n;
 
-
+	global_st = 0;
 
 	while (1)
 	{
