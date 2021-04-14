@@ -11,10 +11,10 @@
 int main(void)
 {
 	int cmd;
-	char *dspl = "$ ", *empty = NULL;
+	char *dspl = "$ ", *empty = NULL, **token = NULL;
 	size_t n;
 
-	global_st = 0;
+
 
 	while (1)
 	{
@@ -22,14 +22,15 @@ int main(void)
 			write(STDOUT_FILENO, dspl, strlen(dspl));
 
 		cmd = getline(&empty, &n, stdin);
-
+		token = strtok_line(empty);
+		hsh_execute(token);
 		if (cmd == EOF)
 		{
 			if (isatty(STDIN_FILENO))
 				_putchar('\n');
 			invoke_sh_exit(empty);
 		}
-
+		printf("%s", empty);
 		if (cmd != -1)
 		{
 			builtin_manager(empty);

@@ -26,7 +26,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-void hsh_execute(char **cmd, int hst, char *txt)
+void hsh_execute(char **cmd)
 {
 	pid_t pid;
 	int i = 0, st;
@@ -35,10 +35,8 @@ void hsh_execute(char **cmd, int hst, char *txt)
 
 	if (pid == 0)
 	{
-		if (execve(cmd[0], cmd, environ) == -1)
+		if (execve(cmd[0], cmd, NULL) == -1)
 		{
-			error_manager(cmd[0], hst);
-			free(txt);
 
 			while (cmd[i])
 			{
