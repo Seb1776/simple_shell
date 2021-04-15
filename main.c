@@ -8,14 +8,16 @@
  *
  * Return: current state
  */
-int main(void)
+int main(int ac, char **av)
 {
 	char *display = "$ ", *empty = NULL, **arr;
-	int i, cmd, hst;
+	int i = 0, cmd, hst = 0;
 	size_t n = 0;
 	struct stat st;
 
-	global_st = 0;
+	 if (ac <= 1)
+	 	hsh_call = av[0];
+	 global_st = 0;
 
 	while (1)
 	{
