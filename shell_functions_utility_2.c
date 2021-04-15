@@ -52,7 +52,6 @@ char *_strdup(char *str)
 }
 
 /**
-
 * _strcat - Concatenates 2 given strings
 *
 * @str1: Frist string
