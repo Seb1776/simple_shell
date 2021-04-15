@@ -8,15 +8,13 @@
  *
  * Return: current state
  */
-int main(int ac, char **av)
+int main(void)
 {
 	char *display = "$ ", *empty = NULL, **arr;
 	int i, cmd, hst;
 	size_t n = 0;
 	struct stat st;
 
-	if (ac <= 1)
-		hsh_call = av[0];
 	global_st = 0;
 
 	while (1)
