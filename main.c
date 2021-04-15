@@ -19,7 +19,6 @@ int main(int ac, char **av)
 	if (ac <= 1)
 		hsh_call = av[0];
 	global_st = 0;
-
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
