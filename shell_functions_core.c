@@ -35,11 +35,13 @@ void hsh_execute(char **cmd, int hst, char *txt)
 		}
 	}
 
+	if (pid > 0)
+		wait(&st);
 
 	else
 	{
-		wait(&st);
-		kill(pid, SIGKILL);
+		perror("An error ocurried");
+		global_st = EXIT_FAILURE;
 	}
 }
 

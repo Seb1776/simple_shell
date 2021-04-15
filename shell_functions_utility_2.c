@@ -28,7 +28,6 @@ int _strcmp(char *frm, const char *dst, int size)
 *
 * Return: On success, string; On falirue, NULL
 */
-
 char *_strdup(char *str)
 {
 	unsigned int i = 0, j;
@@ -53,6 +52,7 @@ char *_strdup(char *str)
 }
 
 /**
+
 * _strcat - Concatenates 2 given strings
 *
 * @str1: Frist string
@@ -60,7 +60,6 @@ char *_strdup(char *str)
 *
 * Return: On success, concatenated string; On failure, NULL
 */
-
 char *_strcat(char *str1, char *str2)
 {
 	unsigned int i, j, k, k1 = 0, k2 = 0;
@@ -75,7 +74,7 @@ char *_strcat(char *str1, char *str2)
 	if (str2 != NULL)
 	{
 		while (str2[k2] != 0)
-		k2++;
+			k2++;
 	}
 
 	k = k1 + k2 + 2;
