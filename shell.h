@@ -1,6 +1,6 @@
 #ifndef OWN_SHELL
 #define OWN_SHELL
-
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/wait.h>
