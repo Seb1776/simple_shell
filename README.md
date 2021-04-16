@@ -4,7 +4,10 @@
 In this project will be recreated the command line of linux shell.
 
 ## Simple Shell
-This is a simple recreation on shell, it can execute the following builtins; **ls**, **env**, **exit** (Can accept arguments)
+This is a simple recreation on shell, it can execute the following builtins; **env**, **exit** (Can accept arguments)
+
+## Flowchart
+https://miro.com/welcomeonboard/Jid0XNzR38IYVh19v8Egn1HtRA3hdeMSqwfr6Npr4Vtyzj6l5GPFIrTaIZl0LtYR)
 
 ## Compilation Method
 This program is wrote in C programming language and it's compiled with: **gcc -Wall -Werror -Wextra -pedantic *.c -o hsh**
@@ -70,4 +73,4 @@ total 60
 ---
 ### Authors
 **Sebastian Toro Rodriguez** [Seb1776](https://github.com/Seb1776)
-**Juan Felipe Balanta [F-balanta](https://github.com/F-balanta)
+**Juan Felipe Balanta** [F-balanta](https://github.com/F-balanta)
