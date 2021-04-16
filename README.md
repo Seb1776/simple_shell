@@ -10,7 +10,10 @@ This is a simple recreation on shell, it can execute the following builtins; **e
 https://miro.com/welcomeonboard/Jid0XNzR38IYVh19v8Egn1HtRA3hdeMSqwfr6Npr4Vtyzj6l5GPFIrTaIZl0LtYR)
 
 ## Compilation Method
-This program is wrote in C programming language and it's compiled with: **gcc -Wall -Werror -Wextra -pedantic *.c -o hsh**
+This program is wrote in C programming language and it's compiled using:
+```Git Bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+```
 
 ## How to Use
 Run the shell typing **./hsh** it will show you a prompt and you can start typing commands
